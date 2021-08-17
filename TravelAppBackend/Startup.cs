@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TravelAppBackend.Data;
+using TravelAppBackend.Data.Repositories;
+using TravelAppBackend.Models.Repositories;
 
 namespace TravelAppBackend
 {
@@ -27,10 +31,22 @@ namespace TravelAppBackend
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            services.AddOpenApiDocument(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TravelAppBackend", Version = "v1" });
+                c.DocumentName = "apidocs";
+                c.Title = "Planaxis API";
+                c.Version = "v1";
+                c.Description = "The Planaxis API documentation description.";
             });
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddControllers();
+            services.AddSwaggerDocument();
+            services.AddScoped<DataInitializer>();
+            services.AddScoped<IJourneyRepository, JourneyRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IItemRepository, ItemRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,9 +55,9 @@ namespace TravelAppBackend
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TravelAppBackend v1"));
             }
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseRouting();
 

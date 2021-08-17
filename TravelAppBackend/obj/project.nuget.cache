@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "n4b4lP54QgnjqR798+8b2siTC16Zgf3HkChaAzAogNJ9cY2ZSk531MsL5CWMa+8UXJ8vD2QvhIb11KMnZuI3og==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Brent\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Brent\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Brent\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Brent\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Brent\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Brent\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-17T11:33:23.713</Modified>
+      <Modified>2021-08-17T11:54:53.630</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\TravelApp.exe">
       <PackagePath>entrypoint\TravelApp.exe</PackagePath>
-      <Modified>2021-08-17T11:33:22.095</Modified>
+      <Modified>2021-08-17T11:54:53.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.11\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -45,6 +45,14 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T03:52:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Assets\images\ballon.jpg">
+      <PackagePath>Assets\images\ballon.jpg</PackagePath>
+      <Modified>2021-08-17T11:50:50.809</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Assets\images\travel-wallpaper.jpg">
+      <PackagePath>Assets\images\travel-wallpaper.jpg</PackagePath>
+      <Modified>2021-08-17T11:50:54.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -86,15 +94,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\TravelApp.xr.xml">
       <PackagePath>TravelApp.xr.xml</PackagePath>
-      <Modified>2021-08-17T11:33:22.011</Modified>
+      <Modified>2021-08-17T11:54:53.099</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-08-17T11:33:22.029</Modified>
+      <Modified>2021-08-17T11:54:53.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-08-17T11:33:22.030</Modified>
+      <Modified>2021-08-17T11:54:53.104</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\Pages\JourneyPage.xbf">
+      <PackagePath>Pages\JourneyPage.xbf</PackagePath>
+      <Modified>2021-08-17T11:54:53.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-08-17T11:33:22.439</Modified>
+      <Modified>2021-08-17T11:54:10.159</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\Core\TravelApp.exe">
       <PackagePath>TravelApp.exe</PackagePath>
-      <Modified>2021-08-17T11:33:23.702</Modified>
+      <Modified>2021-08-17T11:54:53.626</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -34,6 +34,12 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Assets\images\ballon.jpg">
+      <PackagePath>Assets\images\ballon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Assets\images\travel-wallpaper.jpg">
+      <PackagePath>Assets\images\travel-wallpaper.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -72,6 +78,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\Pages\JourneyPage.xbf">
+      <PackagePath>Pages\JourneyPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

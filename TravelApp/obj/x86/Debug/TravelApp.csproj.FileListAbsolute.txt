@@ -43,3 +43,8 @@ C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\qualifiers.txt.int
 C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
+C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyPage.g.i.cs
+C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyPage.g.cs
+C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyPage.xaml
+C:\Users\Brent\source\repos\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyPage.xbf
+C:\Users\Brent\source\repos\TravelApp\TravelApp\bin\x86\Debug\Pages\JourneyPage.xbf

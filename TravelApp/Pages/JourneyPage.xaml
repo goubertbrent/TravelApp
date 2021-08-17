@@ -1,14 +1,41 @@
 ﻿<Page
-    x:Class="TravelApp.Pages.JourneyPage"
+    x:Class="TravelListFrontend.Pages.JourneyPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TravelApp.Pages"
+    xmlns:local="using:TravelListFrontend.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
+        </Grid.Background>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" FontSize="36" Margin="0 20 0 0">78 Dagen: Frankrijk</TextBlock>
+            <StackPanel Orientation="Horizontal">
+           
+            <ListView x:Name="JourneyList" ItemsSource="{Binding}" HorizontalAlignment="Center">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                        <Grid Background="#80ff80" MinWidth="500" Margin="0 20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock FontSize="36" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Name}"/>
+                        <TextBlock FontSize="20" Grid.Row="1" Margin="0 10 0 0" Grid.Column="1" Text="{Binding Start}"/>
+                    </Grid>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

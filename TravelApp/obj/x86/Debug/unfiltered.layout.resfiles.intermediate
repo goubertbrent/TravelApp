@@ -10,6 +10,8 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
+Pages\AddJourneyPage.xbf
 Pages\JourneyPage.xbf
+Pages\RegisterPage.xbf
 TravelApp.xr.xml
 Properties\Default.rd.xml

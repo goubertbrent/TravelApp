@@ -33,7 +33,7 @@ namespace TravelListFrontend.Pages
             this.InitializeComponent();
             viewModel = new JourneyPageViewModel();
             JourneyList.DataContext = new CollectionViewSource { Source = viewModel.Journeys };
-            TxtWelcomeUser.Text = "Welcome" + localSettings.Values["user"].ToString();
+            TxtWelcomeUser.Text = "Welcome " + localSettings.Values["user"].ToString() + "!";
         }
     }
 }

@@ -46,5 +46,21 @@ namespace TravelAppBackend.Controllers
             }
             return BadRequest();
         }
+
+        [AllowAnonymous]
+        [HttpPost("register")]
+        public async Task<ActionResult<string>> Register(RegisterDTO model)
+        {
+            IdentityUser user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            Customer customer = new Customer { Email = model.Email,  Name = model.Name};
+            var result = await _userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                _customerRepository.Add(customer);
+                _customerRepository.SaveChanges();
+                return Created("", customer);
+            }
+            return BadRequest();
+        }
     }
 }

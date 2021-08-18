@@ -23,7 +23,7 @@ namespace TravelAppBackend.Data
             _context.Database.EnsureDeleted();
             if(_context.Database.EnsureCreated())
             {
-                Customer user1 = new Customer() { Email = "user@example.com" };
+                Customer user1 = new Customer() { Email = "brent@example.com" , Name= "Brent"};
                 _context.Customers.Add(user1);
                 await CreateUser(user1.Email, "P@ssword11111!");
                 _context.SaveChanges();

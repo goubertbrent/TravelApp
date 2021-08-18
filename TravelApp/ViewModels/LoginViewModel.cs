@@ -10,11 +10,11 @@ using TravelApp.DTO;
 
 namespace TravelApp.ViewModels
 {
-    public class MainPageViewModel
+    public class LoginViewModel
     {
         private string _statusOk = "OK";
 
-        public MainPageViewModel()
+        public LoginViewModel()
         {
         }
         public async Task<Boolean> Login(LoginDTO login)
@@ -23,6 +23,14 @@ namespace TravelApp.ViewModels
             HttpClient client = new HttpClient();
             var res = await client.PostAsync("http://localhost:65495/api/account", new StringContent(loginJson, System.Text.Encoding.UTF8, "application/json"));
             return res.StatusCode.ToString() == _statusOk;
+        }
+
+        public async Task Register(RegisterDTO registerData)
+        {
+            var registerJson = JsonConvert.SerializeObject(registerData);
+            HttpClient client = new HttpClient();
+            var res = await client.PostAsync("http://localhost:65495/api/account/register", new StringContent(registerJson, System.Text.Encoding.UTF8, "application/json"));
+
         }
     }
 }

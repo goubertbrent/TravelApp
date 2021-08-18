@@ -8,8 +8,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel Margin="24">
+        <TextBlock Text="New User" Style="{StaticResource TitleTextBlockStyle}"/>
+        <TextBox x:ConnectionId='2' x:Name="Name" Header= "Name *" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+        <TextBlock x:ConnectionId='3'  x:Name="ErrorName" Foreground="Red" HorizontalAlignment="Left"    Text="You need to fill in your name" TextWrapping="Wrap"  Height="40"  Width="656" FontSize="18" Margin="0 10 0 0" Visibility="Collapsed"/>
+        <TextBox x:ConnectionId='4' x:Name="Email" Header="Email *" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+        <TextBlock x:ConnectionId='5'  x:Name="ErrorEmail" Foreground="Red" HorizontalAlignment="Left"    Text="Please enter a valid email adress" TextWrapping="Wrap"  Height="40"  Width="656" FontSize="18" Margin="0 10 0 0" Visibility="Collapsed"/>
+        <PasswordBox x:ConnectionId='6' x:Name="Password" Header="Password *"  Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" InputScope="EmailNameOrAddress" />
+        <TextBlock x:ConnectionId='7'  x:Name="ErrorPassword" Foreground="Red" HorizontalAlignment="Left"    Text="Password needs at least 8 characters" TextWrapping="Wrap"  Height="40"  Width="656" FontSize="18" Margin="0 10 0 0" Visibility="Collapsed"/>
+        <PasswordBox x:ConnectionId='8' x:Name="PassConf" Header="Password Confirmation *" Margin="0,24,0,0"  MaxLength="50" Width="400" HorizontalAlignment="Left" />
+        <TextBlock x:ConnectionId='9'  x:Name="ErrorConf" Foreground="Red" HorizontalAlignment="Left"    Text="Password and password confirmation are not the same" TextWrapping="Wrap"  Height="40"  Width="656" FontSize="18" Margin="0 10 0 0" Visibility="Collapsed"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='10' Content="Create" Margin="0,24"                         />
+            <Button x:ConnectionId='11' Content="I already have an Account" Margin="24"                           />
+        </StackPanel>
+    </StackPanel>
 </Page>
 

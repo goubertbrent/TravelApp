@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="DTO\JourneyDTO.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
+    <Compile Include="DTO\RegisterDTO.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -141,7 +142,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\JourneyPageViewModel.cs" />
-    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

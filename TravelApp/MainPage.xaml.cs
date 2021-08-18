@@ -28,17 +28,16 @@ namespace TravelApp
     public sealed partial class MainPage : Page
     {
 
-        public MainPageViewModel viewModel { get; set; }
+        public LoginViewModel viewModel { get; set; }
         Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         public MainPage()
         {
             this.InitializeComponent();
-            viewModel = new MainPageViewModel();
+            viewModel = new LoginViewModel();
         }
-
+       
         private async void Button_ClickAsync(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Hey");
             LoginDTO login = new LoginDTO() { Email = TxtUsername.Text, Password = TxtPassword.Password };
             bool isLoggedIn = await viewModel.Login(login);
             if (isLoggedIn)
@@ -56,7 +55,7 @@ namespace TravelApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddJourneyPage));
+            this.Frame.Navigate(typeof(RegisterPage));
         }
     }
 }

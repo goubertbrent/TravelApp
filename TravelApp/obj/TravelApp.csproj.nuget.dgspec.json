@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelApp\\TravelApp.csproj": {}
+    "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelApp\\TravelApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelApp\\TravelApp.csproj": {
+    "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelApp\\TravelApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelApp\\TravelApp.csproj",
+        "projectUniqueName": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelApp\\TravelApp.csproj",
         "projectName": "TravelApp",
-        "projectPath": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelApp\\TravelApp.csproj",
+        "projectPath": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelApp\\TravelApp.csproj",
         "packagesPath": "C:\\Users\\Brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelApp\\obj\\",
+        "outputPath": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelApp\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -28,7 +28,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Cubemos\\SkeletonTracking\\wrappers\\csharp\\nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

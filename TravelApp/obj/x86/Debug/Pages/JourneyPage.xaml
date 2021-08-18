@@ -13,10 +13,10 @@
             <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
         </Grid.Background>
         <StackPanel>
-            <TextBlock HorizontalAlignment="Center" FontSize="36" Margin="0 20 0 0">78 Dagen: Frankrijk</TextBlock>
+            <TextBlock x:ConnectionId='2' x:Name="TxtWelcomeUser" HorizontalAlignment="Center" FontSize="36" Margin="0 20 0 0">78 Dagen: Frankrijk</TextBlock>
             <StackPanel Orientation="Horizontal">
            
-            <ListView x:ConnectionId='2' x:Name="JourneyList" ItemsSource="{Binding}" HorizontalAlignment="Center">
+            <ListView x:ConnectionId='3' x:Name="JourneyList" ItemsSource="{Binding}" HorizontalAlignment="Center">
                 <ListView.ItemTemplate>
                 <DataTemplate>
                         <Grid Background="#80ff80" MinWidth="500" Margin="0 20">

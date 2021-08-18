@@ -1,29 +1,31 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TravelAppBackend.Models;
-using Task = TravelAppBackend.Models.Task;
 
 namespace TravelAppBackend.Data
 {
     public class DataInitializer
     {
         private readonly AppDbContext _context;
-        public DataInitializer(AppDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+        public DataInitializer(AppDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
-        public void InitializeData()
+        public async System.Threading.Tasks.Task InitializeData()
         {
 
             _context.Database.EnsureDeleted();
             if(_context.Database.EnsureCreated())
             {
-                User user1 = new User() { Username = "Brent Goubert" };
-
-                _context.Users.Add(user1);
+                Customer user1 = new Customer() { Email = "user@example.com" };
+                _context.Customers.Add(user1);
+                await CreateUser(user1.Email, "P@ssword11111!");
                 _context.SaveChanges();
 
                 Category badkamer = new Category() {Name="badkamer", User = user1 };
@@ -37,8 +39,8 @@ namespace TravelAppBackend.Data
                 _context.Items.Add(item3);
                 _context.SaveChanges();
 
-                Task task1 = new Task() { Description = "Visum bestellen online" };
-                Task task2 = new Task() { Description = "Batterij gsm opladen" };
+                Models.Task task1 = new Models.Task() { Description = "Visum bestellen online" };
+                Models.Task task2 = new Models.Task() { Description = "Batterij gsm opladen" };
 
                 ItemLine itemline1 = new ItemLine() { Item = item1, Amount = 2 };
                 ItemLine itemline2 = new ItemLine() { Item = item2, Amount = 1 };
@@ -55,6 +57,11 @@ namespace TravelAppBackend.Data
 
                 _context.SaveChanges();
             }
+        }
+        private async System.Threading.Tasks.Task CreateUser(string email, string password)
+        {
+            var user = new IdentityUser {  Email = email, UserName = email };
+            await _userManager.CreateAsync(user, password);
         }
     }
 }

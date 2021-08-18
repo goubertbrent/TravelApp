@@ -25,6 +25,7 @@ namespace TravelListFrontend.Pages
     public sealed partial class JourneyPage : Page
     {
         #region Properties
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         public JourneyPageViewModel viewModel { get; set; }
         #endregion
         public JourneyPage()
@@ -32,6 +33,7 @@ namespace TravelListFrontend.Pages
             this.InitializeComponent();
             viewModel = new JourneyPageViewModel();
             JourneyList.DataContext = new CollectionViewSource { Source = viewModel.Journeys };
+            TxtWelcomeUser.Text = "Welcome" + localSettings.Values["user"].ToString();
         }
     }
 }

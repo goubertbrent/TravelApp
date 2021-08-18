@@ -11,16 +11,26 @@ namespace TravelAppBackend.Data.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly AppDbContext _dbContext;
-        private readonly DbSet<User> _users;
+        private readonly DbSet<Customer> _users;
         public UserRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
-            _users = dbContext.Users;
+            _users = dbContext.Customers;
         }
 
-        public User GetBy(int userId)
+        public void Add(Customer customer)
         {
-            return _users.SingleOrDefault(u => u.Id == userId);
+            _users.Add(customer);
+        }
+
+        public Customer GetBy(string email)
+        {
+            return _users.SingleOrDefault(u => u.Email == email);
+        }
+
+        public void SaveChanges()
+        {
+            _dbContext.SaveChanges();
         }
     }
 }

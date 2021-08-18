@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
         </Grid.Background>
         <StackPanel>
-            <TextBlock HorizontalAlignment="Center" FontSize="36" Margin="0 20 0 0">78 Dagen: Frankrijk</TextBlock>
+            <TextBlock x:Name="TxtWelcomeUser" HorizontalAlignment="Center" FontSize="36" Margin="0 20 0 0">78 Dagen: Frankrijk</TextBlock>
             <StackPanel Orientation="Horizontal">
            
             <ListView x:Name="JourneyList" ItemsSource="{Binding}" HorizontalAlignment="Center">

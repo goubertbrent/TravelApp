@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj": {}
+    "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj": {
+    "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj",
         "projectName": "TravelAppBackend",
-        "projectPath": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj",
+        "projectPath": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelAppBackend\\TravelAppBackend.csproj",
         "packagesPath": "C:\\Users\\Brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brent\\source\\repos\\TravelApp\\TravelAppBackend\\obj\\",
+        "outputPath": "C:\\Users\\Brent\\Documents\\School\\Windows\\TravelApp\\TravelAppBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\Cubemos\\SkeletonTracking\\wrappers\\csharp\\nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +44,22 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -53,6 +67,10 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[13.13.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -77,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

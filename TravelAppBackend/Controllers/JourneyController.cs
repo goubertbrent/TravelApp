@@ -56,7 +56,7 @@ namespace TravelAppBackend.Controllers
                 Start = new DateTime(journeyDTO.StartYear,journeyDTO.StartMonth, journeyDTO.StartDay)
             };
 
-            journey.User = _userRepository.GetBy(journeyDTO.userId);
+            journey.User = _userRepository.GetBy(journeyDTO.userEmail);
 
             _journeyRepository.Add(journey);
             _journeyRepository.SaveChanges();

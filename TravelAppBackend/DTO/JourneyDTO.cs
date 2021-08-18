@@ -12,6 +12,6 @@ namespace TravelAppBackend.DTO
         public int StartDay { get; set; }
         public int StartMonth { get; set; }
         public int StartYear { get; set; }
-        public int userId { get; set; }
+        public string  userEmail { get; set; }
     }
 }

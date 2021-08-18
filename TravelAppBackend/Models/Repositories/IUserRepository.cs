@@ -7,6 +7,8 @@ namespace TravelAppBackend.Models.Repositories
 {
     public interface IUserRepository
     {
-        User GetBy(int userId);
+        Customer GetBy(string email);
+        void Add(Customer customer);
+        void SaveChanges();
     }
 }

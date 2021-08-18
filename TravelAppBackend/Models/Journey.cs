@@ -12,7 +12,7 @@ namespace TravelAppBackend.Models
         public DateTime Start { get; set; }
         public List<ItemLine> Items { get; set; }
         public List<Task> Tasks { get; set; }
-        public User User { get; set; }
+        public Customer User { get; set; }
 
         #region Constructors
         public Journey()

@@ -42,7 +42,7 @@ namespace TravelListFrontend.ViewModels
         {
             var journeyJson = JsonConvert.SerializeObject(newJourney);
             HttpClient client = new HttpClient();
-            var res = await client.PostAsync("http://localhost:59489/api/journey", new StringContent(journeyJson, System.Text.Encoding.UTF8,"application/json"));
+            var res = await client.PostAsync("http://localhost:65495/api/journey", new StringContent(journeyJson, System.Text.Encoding.UTF8,"application/json"));
         }
         #endregion
 

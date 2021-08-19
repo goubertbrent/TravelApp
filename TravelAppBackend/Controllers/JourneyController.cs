@@ -43,10 +43,15 @@ namespace TravelAppBackend.Controllers
             return journey;
         }
 
+        [HttpGet("user/{email}")]
+        public IEnumerable<Journey> GetJourneysByUser(string email)
+        {
+            return _journeyRepository.GetByUser(email);
+        }
+
         [HttpPost]
         public ActionResult<JourneyDTO> PostJourney(JourneyDTO journeyDTO)
         {
-            Debug.WriteLine("Teeeeeeeeeeeeest");
             Debug.WriteLine(journeyDTO.StartDay);
             Debug.WriteLine(journeyDTO.StartMonth);
             Debug.WriteLine(journeyDTO.StartYear);
@@ -56,7 +61,7 @@ namespace TravelAppBackend.Controllers
                 Start = new DateTime(journeyDTO.StartYear,journeyDTO.StartMonth, journeyDTO.StartDay)
             };
 
-            journey.User = _userRepository.GetBy(journeyDTO.userEmail);
+            journey.User = _userRepository.GetBy(journeyDTO.Email);
 
             _journeyRepository.Add(journey);
             _journeyRepository.SaveChanges();

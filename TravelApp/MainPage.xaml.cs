@@ -44,7 +44,7 @@ namespace TravelApp
             if (isLoggedIn)
             {
                 localSettings.Values["user"] = TxtUsername.Text;
-                 this.Frame.Navigate(typeof(JourneyPage));
+                this.Frame.Navigate(typeof(NavigationPage));
             }
             else
             {
@@ -56,8 +56,8 @@ namespace TravelApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            // this.Frame.Navigate(typeof(RegisterPage));
-            this.Frame.Navigate(typeof(NavigationPage));
+             this.Frame.Navigate(typeof(RegisterPage));
+            
         }
     }
 }

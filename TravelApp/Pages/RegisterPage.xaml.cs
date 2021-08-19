@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
 using TravelApp;
 using TravelApp.DTO;
+using TravelApp.Pages;
 using TravelApp.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -40,8 +41,8 @@ namespace TravelListFrontend.Pages
             {
                 RegisterDTO registerData = new RegisterDTO() { Email = Email.Text, Name = Name.Text, Password = Password.Password };
                 viewModel.Register(registerData);
-                localSettings.Values["user"] = Name.Text;
-                this.Frame.Navigate(typeof(JourneyPage));
+                localSettings.Values["user"] = Email.Text;
+                this.Frame.Navigate(typeof(NavigationPage));
             }
         }
 

@@ -14,6 +14,7 @@ namespace TravelListFrontend.ViewModels
     public class JourneyPageViewModel
     {
         #region Properties
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         public ObservableCollection<Journey> Journeys { get; set; }
         #endregion
 
@@ -29,7 +30,8 @@ namespace TravelListFrontend.ViewModels
         private async void LoadJourneysAsync()
         {
             HttpClient client = new HttpClient();
-            var json = await client.GetStringAsync(new Uri("http://localhost:65495/api/journey"));
+            string link = "http://localhost:65495/api/journey/user/" + localSettings.Values["user"].ToString();
+            var json = await client.GetStringAsync(new Uri(link));
             var journeys = JsonConvert.DeserializeObject<IList<Journey>>(json);
 
             foreach(Journey journey in journeys)

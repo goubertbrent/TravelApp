@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-08-19T12:58:06.069</Modified>
+      <Modified>2021-08-19T13:23:29.926</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\TravelApp.exe">
       <PackagePath>entrypoint\TravelApp.exe</PackagePath>
-      <Modified>2021-08-19T12:58:05.479</Modified>
+      <Modified>2021-08-19T13:23:29.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -102,27 +102,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-08-19T12:48:59.516</Modified>
+      <Modified>2021-08-19T13:23:29.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-08-19T12:48:59.516</Modified>
+      <Modified>2021-08-19T13:23:29.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\AddJourneyPage.xbf">
       <PackagePath>Pages\AddJourneyPage.xbf</PackagePath>
-      <Modified>2021-08-19T12:48:59.517</Modified>
+      <Modified>2021-08-19T13:23:29.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\JourneyPage.xbf">
       <PackagePath>Pages\JourneyPage.xbf</PackagePath>
-      <Modified>2021-08-19T12:48:59.517</Modified>
+      <Modified>2021-08-19T13:23:29.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\NavigationPage.xbf">
       <PackagePath>Pages\NavigationPage.xbf</PackagePath>
-      <Modified>2021-08-19T12:58:05.387</Modified>
+      <Modified>2021-08-19T13:23:29.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\RegisterPage.xbf">
       <PackagePath>Pages\RegisterPage.xbf</PackagePath>
-      <Modified>2021-08-19T12:48:59.518</Modified>
+      <Modified>2021-08-19T13:23:29.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Core\TravelApp.exe">
       <PackagePath>TravelApp.exe</PackagePath>
-      <Modified>2021-08-19T12:58:06.063</Modified>
+      <Modified>2021-08-19T13:23:29.919</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

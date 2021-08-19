@@ -12,5 +12,6 @@ namespace TravelListFrontend.DTO
         public int StartDay { get; set; }
         public int startMonth { get; set; }
         public int startYear { get; set; }
+        public string Email { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace TravelListFrontend.Pages
     /// </summary>
     public sealed partial class AddJourneyPage : Page
     {
+        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         public JourneyPageViewModel viewModel { get; set; }
         public AddJourneyPage()
         {
@@ -35,7 +36,7 @@ namespace TravelListFrontend.Pages
         private void newJourneyBtn_Click(object sender, RoutedEventArgs e)
         {
             DateTime startDate = startDateJourney.Date.Value.DateTime;
-            JourneyDTO newJourney = new JourneyDTO() { Name = nameNewJourney.Text, StartDay = startDate.Day, startMonth = startDate.Month, startYear = startDate.Year };
+            JourneyDTO newJourney = new JourneyDTO() { Name = nameNewJourney.Text, StartDay = startDate.Day, startMonth = startDate.Month, startYear = startDate.Year, Email= localSettings.Values["user"].ToString() };
             viewModel.PostJourney(newJourney);
             nameNewJourney.Text = "";
             SuccesfullAddedTxt.Text = startDateJourney.Date.Value.DateTime.ToString();

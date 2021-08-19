@@ -12,6 +12,7 @@ App.xbf
 MainPage.xbf
 Pages\AddJourneyPage.xbf
 Pages\JourneyPage.xbf
+Pages\NavigationPage.xbf
 Pages\RegisterPage.xbf
 TravelApp.xr.xml
 Properties\Default.rd.xml

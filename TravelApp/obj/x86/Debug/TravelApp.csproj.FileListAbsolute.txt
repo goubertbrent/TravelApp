@@ -119,3 +119,8 @@ C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Multip
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\TravelApp.csproj.AssemblyReference.cache
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.g.i.cs
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.g.cs
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.xaml
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.xbf
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\NavigationPage.xbf

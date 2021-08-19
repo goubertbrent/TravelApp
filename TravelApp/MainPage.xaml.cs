@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using TravelApp.DTO;
+using TravelApp.Pages;
 using TravelApp.ViewModels;
 using TravelListFrontend.Pages;
 using Windows.Foundation;
@@ -55,7 +56,8 @@ namespace TravelApp
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RegisterPage));
+            // this.Frame.Navigate(typeof(RegisterPage));
+            this.Frame.Navigate(typeof(NavigationPage));
         }
     }
 }

@@ -43,14 +43,11 @@ namespace TravelAppBackend.Controllers
             {
                 Name = itemDTO.Name
             };
-            item.Category = _categoryRepository.getById(itemDTO.CategoryId);
+            item.Category = _categoryRepository.GetByName(itemDTO.CategoryName);
             _itemRepository.Add(item);
             _itemRepository.SaveChanges();
             return CreatedAtAction(nameof(GetItems), new { id = item.Id }, itemDTO);
         }
         #endregion
-
-
-
     }
 }

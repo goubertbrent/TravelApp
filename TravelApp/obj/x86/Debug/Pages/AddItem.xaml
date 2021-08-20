@@ -1,0 +1,29 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="TravelApp.Pages.AddItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravelApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
+        </StackPanel.Background>
+        <TextBlock Text="New Item" Style="{StaticResource TitleTextBlockStyle}"/>
+        <TextBox x:ConnectionId='2' x:Name="NameItem" Header= "Name Item" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+        <ComboBox x:ConnectionId='3' x:Name="CategoryCombo"                                                   Header="Category" PlaceholderText="Pick a category" Width="200">
+            <x:String>badkamer</x:String>
+            <x:String>slaapkamer</x:String>
+        </ComboBox>
+
+        <ListBox x:ConnectionId='4' x:Name="ListCat"                                                DisplayMemberPath="Item1" SelectedValuePath="Item2" Height="164"                         />
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='6' Content="Create" Margin="0,24"                         />
+        </StackPanel>
+        <TextBlock x:ConnectionId='5' x:Name="TxtDone" Text="Category Added" Foreground="Green" Visibility="Collapsed"/>
+    </StackPanel>
+</Page>
+

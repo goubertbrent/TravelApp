@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="TravelApp.Pages.AddCategory"
+    x:Class="TravelApp.Pages.AddItem"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TravelApp.Pages"
@@ -12,8 +12,14 @@
         <StackPanel.Background>
             <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
         </StackPanel.Background>
-        <TextBlock Text="New Category" Style="{StaticResource TitleTextBlockStyle}"/>
-        <TextBox x:Name="NameCategory" Header= "Name Category" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+        <TextBlock Text="New Item" Style="{StaticResource TitleTextBlockStyle}"/>
+        <TextBox x:Name="NameItem" Header= "Name Item" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+        <ComboBox x:Name="CategoryCombo" SelectionChanged="ColorComboBox_SelectionChanged" Header="Category" PlaceholderText="Pick a category" Width="200">
+            <x:String>badkamer</x:String>
+            <x:String>slaapkamer</x:String>
+        </ComboBox>
+
+        <ListBox x:Name="ListCat" ItemsSource="{x:Bind viewModel.CategoryNames}" DisplayMemberPath="Item1" SelectedValuePath="Item2" Height="164" Loaded="ListBox2_Loaded"/>
         <StackPanel Orientation="Horizontal">
             <Button Content="Create" Margin="0,24" Click="SaveButton_Click"/>
         </StackPanel>

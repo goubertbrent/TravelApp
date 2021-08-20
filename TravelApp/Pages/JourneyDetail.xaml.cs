@@ -54,10 +54,5 @@ namespace TravelApp.Pages
             parameters.Category = clickedCategory;
             this.Frame.Navigate(typeof(ItemPage), parameters);
         }
-
-        private void Border_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AddCategory));
-        }
     }
 }

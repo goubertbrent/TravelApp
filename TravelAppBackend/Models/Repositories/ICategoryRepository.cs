@@ -12,5 +12,6 @@ namespace TravelAppBackend.Models.Repositories
         void Add(Category category);
         bool findName(string name);
         IEnumerable<Category> GetAll(string email);
+        Category GetByName(string name);
     }
 }

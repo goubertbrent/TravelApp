@@ -43,6 +43,11 @@ namespace TravelAppBackend.Data.Repositories
             return _categories.FirstOrDefault(c => c.Id == id);
         }
 
+        public Category GetByName(string name)
+        {
+            return _categories.FirstOrDefault(c => c.Name == name);
+        }
+
         public void SaveChanges()
         {
             _dbContext.SaveChanges();

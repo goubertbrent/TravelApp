@@ -50,9 +50,13 @@ namespace TravelApp.Pages
             {
                 SplitViewFrame.Navigate(typeof(AddJourneyPage));
             }
-            if(buttonText == addCategoryText)
+            else if(buttonText == addCategoryText)
             {
                 SplitViewFrame.Navigate(typeof(AddCategory));
+            }
+            else if(buttonText == addItemText)
+            {
+                SplitViewFrame.Navigate(typeof(AddItem));
             }
             else
             {

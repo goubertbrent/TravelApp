@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TravelApp.DTO;
 using TravelApp.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -21,21 +23,31 @@ namespace TravelApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddCategory : Page
+    public sealed partial class AddItem : Page
     {
-        public CategoryViewModel CategoryViewModel { get; set; }
-        public AddCategory()
+        public CategoryViewModel viewModel { get; set; }
+        public List<String> TestList { get; set; } = new List<string> { "slaapkamer", "badkamer" };
+        public AddItem()
         {
             this.InitializeComponent();
-            CategoryViewModel = new CategoryViewModel();
+            viewModel = new CategoryViewModel();
+            ListCat.DataContext = new CollectionViewSource { Source = viewModel.Categories };
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            TxtDone.Visibility = Visibility.Collapsed;
-            CategoryViewModel.CreateCategory(NameCategory.Text);
-            NameCategory.Text = "";
-            TxtDone.Visibility = Visibility.Visible;
+            ItemDTO item = new ItemDTO() { Name = NameItem.Text, CategoryName = CategoryCombo.SelectedValue.ToString() };
+            viewModel.createItem(item);
+        }
+
+        private void ListBox2_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

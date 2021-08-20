@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TravelApp.Util;
 using TravelApp.ViewModels;
 using TravelListFrontend.Models;
 using TravelListFrontend.ViewModels;
@@ -45,5 +46,13 @@ namespace TravelApp.Pages
             ListItems.DataContext = new CollectionViewSource { Source = Categories };
         }
 
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            JourneyParameters parameters = new JourneyParameters();
+            parameters.JourneyId = currentJourney.Id;
+            Category clickedCategory = (sender as TextBlock).DataContext as Category;
+            parameters.Category = clickedCategory;
+            this.Frame.Navigate(typeof(ItemPage), parameters);
+        }
     }
 }

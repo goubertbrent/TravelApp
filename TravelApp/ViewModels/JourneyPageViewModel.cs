@@ -55,6 +55,24 @@ namespace TravelListFrontend.ViewModels
             var categories = JsonConvert.DeserializeObject<IList<Category>>(json);
             return categories;
         }
+
+        internal async void EditIsChecked(int journeyId, int id, bool isChecked)
+        {
+            // var bodyJson = JsonConvert.SerializeObject(isChecked);
+            var bodyJson = JsonConvert.SerializeObject(true);
+            HttpClient client = new HttpClient();
+            string link = "http://localhost:65495/api/journey/" + journeyId + "/" + id + "/" + isChecked;
+            var res = await client.PostAsync(link, new StringContent(bodyJson, System.Text.Encoding.UTF8, "application/json"));
+        }
+
+        public async Task<IList<ItemLine>> GetItems(int journeyId, int categoryId)
+        {
+            HttpClient client = new HttpClient();
+            string link = "http://localhost:65495/api/journey/" + journeyId + "/" + categoryId + "/items";
+            var json = await client.GetStringAsync(new Uri(link));
+            var items = JsonConvert.DeserializeObject<IList<ItemLine>>(json);
+            return items;
+        }
         #endregion
 
     }

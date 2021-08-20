@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="TravelApp.Pages.JourneyDetail"
+    x:Class="TravelApp.Pages.ItemPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TravelApp.Pages"
@@ -8,16 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
-    
-    
     <StackPanel >
         <StackPanel.Background>
             <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
         </StackPanel.Background>
-        <TextBlock x:ConnectionId='2' x:Name="TxTHeader" Margin="0 16 0 0" HorizontalAlignment="Center" FontSize="24"/>
-        <TextBlock Text="Categories:" FontSize="20" Margin="8 0 0 16"/>
-        <ListView x:ConnectionId='3' x:Name="ListItems" ItemsSource="{Binding}" Margin="8 0 0 0" >
+        <TextBlock x:Name="TxTHeader" Margin="0 16 0 0" HorizontalAlignment="Center" FontSize="24"/>
+        <TextBlock Text="Items:" FontSize="20" Margin="8 0 0 16"/>
+        <ListView x:Name="ListItems" ItemsSource="{Binding}" Margin="8 0 0 0" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="Template">
@@ -30,13 +27,20 @@
                 </Style>
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
-            <DataTemplate>
-                    <Border HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="200" Margin="0 8 0 8">
-                        <TextBlock x:ConnectionId='6' Padding="8" HorizontalAlignment="Center"  Text="{Binding Name}"                          />
+                <DataTemplate>
+
+                    <Border HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="400" Margin="0 8 0 8">
+                        <StackPanel>
+                            <TextBlock Padding="8"   Text="{Binding Item.Name}" />
+                            <StackPanel  Orientation="Horizontal">
+                                <TextBlock Text="Amount: "/>
+                                <TextBlock Text="{Binding Amount}"/>
+                            </StackPanel>
+                            <CheckBox x:Name="NameCheckbox" IsChecked="{Binding isChecked}" Tapped="CheckBox_Tapped"/>
+                        </StackPanel>
                     </Border>
                 </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
 </Page>
-

@@ -36,7 +36,7 @@ namespace TravelAppBackend.Controllers
         public ActionResult<Journey> GetJourney(int journeyId)
         {
             Journey journey = _journeyRepository.GetBy(journeyId);
-            if(journey == null)
+            if (journey == null)
             {
                 return NotFound();
             }
@@ -50,9 +50,15 @@ namespace TravelAppBackend.Controllers
         }
 
         [HttpGet("{journeyId}/categories")]
-        public IEnumerable<Category> GetJourneysByUser(int journeyId)
+        public IEnumerable<Category> GetCategories(int journeyId)
         {
             return _journeyRepository.getCategories(journeyId);
+        }
+
+        [HttpGet("{journeyId}/{categoryId}/items")]
+        public IEnumerable<ItemLine> GetItems(int journeyId, int categoryId)
+        {
+            return _journeyRepository.getItems(journeyId, categoryId);
         }
 
         [HttpPost]
@@ -64,7 +70,7 @@ namespace TravelAppBackend.Controllers
             Journey journey = new Journey()
             {
                 Name = journeyDTO.Name,
-                Start = new DateTime(journeyDTO.StartYear,journeyDTO.StartMonth, journeyDTO.StartDay)
+                Start = new DateTime(journeyDTO.StartYear, journeyDTO.StartMonth, journeyDTO.StartDay)
             };
 
             journey.User = _userRepository.GetBy(journeyDTO.Email);
@@ -82,7 +88,7 @@ namespace TravelAppBackend.Controllers
                 return NotFound();
             }
             ItemLine itemline = journey.GetItem(itemLineId);
-            if(itemline == null)
+            if (itemline == null)
             {
                 return NotFound();
             }
@@ -92,7 +98,7 @@ namespace TravelAppBackend.Controllers
         [HttpPost("{journeyId}/items")]
         public ActionResult<ItemLine> PostItemLine(int journeyId, ItemLineDTO itemlineDTO)
         {
-            if(!_journeyRepository.TryGetJourney(journeyId, out var journey))
+            if (!_journeyRepository.TryGetJourney(journeyId, out var journey))
             {
                 return NotFound();
             }
@@ -100,13 +106,23 @@ namespace TravelAppBackend.Controllers
             ItemLine itemline = new ItemLine()
             {
                 Amount = itemlineDTO.Amount
-                
+
             };
 
             itemline.Item = _itemRepository.getById(itemlineDTO.ItemId);
             journey.addItem(itemline);
             _journeyRepository.SaveChanges();
-            return CreatedAtAction("GetJourneys", new { id= journey.Id, itemlineId = itemline.Id }, itemline);
+            return CreatedAtAction("GetJourneys", new { id = journey.Id, itemlineId = itemline.Id }, itemline);
+        }
+
+        [HttpPost("{journeyId}/{itemLineId}/{isChecked}")]
+        public IActionResult ChangeChecked(int journeyId, int itemLineId, bool isChecked)
+        {
+            _journeyRepository.changeChecked(journeyId, itemLineId, isChecked);
+            _journeyRepository.SaveChanges();
+            return Ok();
         }
     }
 }
+
+

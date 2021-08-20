@@ -25,6 +25,14 @@ namespace TravelAppBackend.Data.Repositories
             _journeys.Add(journey);
         }
 
+        public void changeChecked(int journeyId, int itemLineId, bool isChecked)
+        {
+            Journey journey = GetBy(journeyId);
+            ItemLine item = journey.Items.Where(item => item.Id == itemLineId).SingleOrDefault();
+            item.IsChecked = isChecked;
+
+        }
+
         public void Delete(Journey journey)
         {
             _journeys.Remove(journey);
@@ -49,6 +57,12 @@ namespace TravelAppBackend.Data.Repositories
         {
             Journey journey = GetBy(journeyId);
             return journey.Items.Select(item => item.Item.Category).Distinct().ToList();
+        }
+
+        public IEnumerable<ItemLine> getItems(int journeyId, int categoryId)
+        {
+            Journey journey = GetBy(journeyId);
+            return journey.Items.Where(item => item.Item.Category.Id == categoryId).ToList();
         }
 
         public void SaveChanges()

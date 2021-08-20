@@ -32,7 +32,7 @@
             <ListView.ItemTemplate>
             <DataTemplate>
                     <Border HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="200" Margin="0 8 0 8">
-                        <TextBlock Padding="8" HorizontalAlignment="Center"  Text="{Binding Name}"/>
+                        <TextBlock Padding="8" HorizontalAlignment="Center"  Text="{Binding Name}" Tapped="TextBlock_Tapped"/>
                     </Border>
                 </DataTemplate>
         </ListView.ItemTemplate>

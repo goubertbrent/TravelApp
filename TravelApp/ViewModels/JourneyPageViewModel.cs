@@ -46,6 +46,15 @@ namespace TravelListFrontend.ViewModels
             HttpClient client = new HttpClient();
             var res = await client.PostAsync("http://localhost:65495/api/journey", new StringContent(journeyJson, System.Text.Encoding.UTF8,"application/json"));
         }
+
+        public async Task<IList<Category>> GetCategories(int journeyId)
+        {
+            HttpClient client = new HttpClient();
+            string link = "http://localhost:65495/api/journey/" + journeyId + "/categories";
+            var json = await client.GetStringAsync(new Uri(link));
+            var categories = JsonConvert.DeserializeObject<IList<Category>>(json);
+            return categories;
+        }
         #endregion
 
     }

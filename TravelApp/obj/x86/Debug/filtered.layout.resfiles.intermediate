@@ -11,6 +11,7 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 Pages\AddJourneyPage.xbf
+Pages\JourneyDetail.xbf
 Pages\JourneyPage.xbf
 Pages\NavigationPage.xbf
 Pages\RegisterPage.xbf

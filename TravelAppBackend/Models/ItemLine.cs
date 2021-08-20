@@ -10,5 +10,6 @@ namespace TravelAppBackend.Models
         public int Id { get; set; }
         public Item Item { get; set; }
         public int Amount { get; set; }
+        public bool IsChecked { get; set; }
     }
 }

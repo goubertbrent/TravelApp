@@ -13,6 +13,7 @@ namespace TravelAppBackend.Models.Repositories
         void Add(Journey journey);
         void Delete(Journey journey);
         bool TryGetJourney(int id, out Journey journey);
+        IEnumerable<Category> getCategories(int journeyId);
         void SaveChanges();
 
     }

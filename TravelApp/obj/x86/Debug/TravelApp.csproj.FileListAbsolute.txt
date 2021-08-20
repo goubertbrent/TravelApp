@@ -124,3 +124,8 @@ C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.xaml
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\NavigationPage.xbf
 C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\NavigationPage.xbf
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\JourneyDetail.xbf
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyDetail.g.i.cs
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyDetail.g.cs
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyDetail.xaml
+C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\obj\x86\Debug\Pages\JourneyDetail.xbf

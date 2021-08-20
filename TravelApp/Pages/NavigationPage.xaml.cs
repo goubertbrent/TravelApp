@@ -59,5 +59,14 @@ namespace TravelApp.Pages
             localSettings.Values["user"] = "";
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SplitViewFrame.CanGoBack)
+            {
+                SplitViewFrame.GoBack();
+                
+            }
+        }
     }
 }

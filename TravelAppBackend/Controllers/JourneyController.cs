@@ -49,6 +49,12 @@ namespace TravelAppBackend.Controllers
             return _journeyRepository.GetByUser(email);
         }
 
+        [HttpGet("{journeyId}/categories")]
+        public IEnumerable<Category> GetJourneysByUser(int journeyId)
+        {
+            return _journeyRepository.getCategories(journeyId);
+        }
+
         [HttpPost]
         public ActionResult<JourneyDTO> PostJourney(JourneyDTO journeyDTO)
         {

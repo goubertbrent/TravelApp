@@ -11,5 +11,6 @@ namespace TravelListFrontend.Models
         public int Id { get; set; }
         public Item Item { get; set; }
         public int Amount { get; set; }
+        public bool isChecked { get; set; }
     }
 }

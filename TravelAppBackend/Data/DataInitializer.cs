@@ -42,9 +42,9 @@ namespace TravelAppBackend.Data
                 Models.Task task1 = new Models.Task() { Description = "Visum bestellen online" };
                 Models.Task task2 = new Models.Task() { Description = "Batterij gsm opladen" };
 
-                ItemLine itemline1 = new ItemLine() { Item = item1, Amount = 2 };
-                ItemLine itemline2 = new ItemLine() { Item = item2, Amount = 1 };
-                ItemLine itemline3 = new ItemLine() { Item = item3, Amount = 3 };
+                ItemLine itemline1 = new ItemLine() { Item = item1, Amount = 2, IsChecked=false };
+                ItemLine itemline2 = new ItemLine() { Item = item2, Amount = 1, IsChecked=true };
+                ItemLine itemline3 = new ItemLine() { Item = item3, Amount = 3, IsChecked =false };
 
                 Journey journey = new Journey() {Name = "Frankrijk caravan",Start = DateTime.Now.AddDays(15), User = user1 };
                 journey.addItem(itemline1);

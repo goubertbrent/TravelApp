@@ -37,12 +37,18 @@ namespace TravelAppBackend.Data.Repositories
 
         public Journey GetBy(int journeyId)
         {
-            return _journeys.Include(j => j.User).Include(j => j.Items).ThenInclude(il => il.Item).Include(j => j.Tasks).SingleOrDefault(j => j.Id == journeyId);
+            return _journeys.Include(j => j.User).Include(j => j.Items).ThenInclude(il => il.Item).ThenInclude(i => i.Category).Include(j => j.Tasks).SingleOrDefault(j => j.Id == journeyId);
         }
 
         public IEnumerable<Journey> GetByUser(string email)
         {
             return _journeys.Include(j => j.User).Where(j => j.User.Email == email).ToList();
+        }
+
+        public IEnumerable<Category> getCategories(int journeyId)
+        {
+            Journey journey = GetBy(journeyId);
+            return journey.Items.Select(item => item.Item.Category).Distinct().ToList();
         }
 
         public void SaveChanges()

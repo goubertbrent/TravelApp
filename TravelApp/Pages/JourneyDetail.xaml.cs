@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TravelApp.Pages;
+using TravelApp.ViewModels;
 using TravelListFrontend.Models;
 using TravelListFrontend.ViewModels;
 using Windows.Foundation;
@@ -19,29 +19,31 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace TravelListFrontend.Pages
+namespace TravelApp.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class JourneyPage : Page
+    public sealed partial class JourneyDetail : Page
     {
-        #region Properties
-        Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-        public JourneyPageViewModel viewModel { get; set; }
-        #endregion
-        public JourneyPage()
+        private JourneyPageViewModel viewModel = new JourneyPageViewModel();
+        public Journey currentJourney { get; set; }
+        public IList<Category> Categories { get; set; }
+        public JourneyDetail()
         {
             this.InitializeComponent();
-            viewModel = new JourneyPageViewModel();
-            JourneyList.DataContext = new CollectionViewSource { Source = viewModel.Journeys };
-            TxtWelcomeUser.Text = "Welcome " + localSettings.Values["user"].ToString() + "!";
+            Categories = new List<Category>();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            Journey clickedJourney = (sender as Button).DataContext as Journey;
-            this.Frame.Navigate(typeof(JourneyDetail), clickedJourney);
+            base.OnNavigatedTo(e);
+
+            currentJourney = (Journey)e.Parameter;
+            TxTHeader.Text = "Journey: " + currentJourney.Name;
+            Categories = await viewModel.GetCategories(currentJourney.Id);
+            ListItems.DataContext = new CollectionViewSource { Source = Categories };
         }
+
     }
 }

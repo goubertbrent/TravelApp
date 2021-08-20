@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using TravelApp.Util;
-using TravelApp.ViewModels;
+using TravelApp.DTO;
 using TravelListFrontend.Models;
 using TravelListFrontend.ViewModels;
 using Windows.Foundation;
@@ -25,15 +23,14 @@ namespace TravelApp.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class JourneyDetail : Page
+    public sealed partial class AddItemToJourneyPage : Page
     {
-        private JourneyPageViewModel viewModel = new JourneyPageViewModel();
+        private JourneyPageViewModel viewModel;
         public Journey currentJourney { get; set; }
-        public IList<Category> Categories { get; set; }
-        public JourneyDetail()
+        public AddItemToJourneyPage()
         {
             this.InitializeComponent();
-            Categories = new List<Category>();
+            viewModel = new JourneyPageViewModel();
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -42,22 +39,17 @@ namespace TravelApp.Pages
 
             currentJourney = (Journey)e.Parameter;
             TxTHeader.Text = "Journey: " + currentJourney.Name;
-            Categories = await viewModel.GetCategories(currentJourney.Id);
-            ListItems.DataContext = new CollectionViewSource { Source = Categories };
         }
 
-        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            JourneyParameters parameters = new JourneyParameters();
-            parameters.JourneyId = currentJourney.Id;
-            Category clickedCategory = (sender as TextBlock).DataContext as Category;
-            parameters.Category = clickedCategory;
-            this.Frame.Navigate(typeof(ItemPage), parameters);
-        }
 
-        private void BtnItemJourney_Click(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddItemToJourneyPage), currentJourney);
+            TxtDone.Visibility = Visibility.Collapsed;
+            int amount = Int32.Parse(AmountItem.Text);
+            ItemLineDTO itemLineDTO = new ItemLineDTO() {Amount = amount, ItemName = ItemCombo.SelectedValue.ToString()  };
+            viewModel.AddItemLine(currentJourney.Id, itemLineDTO);
+            AmountItem.Text = "";
+            TxtDone.Visibility = Visibility.Visible;
         }
     }
 }

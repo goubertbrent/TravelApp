@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\ItemDTO.cs" />
+    <Compile Include="DTO\ItemLineDTO.cs" />
     <Compile Include="DTO\JourneyDTO.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="DTO\RegisterDTO.cs" />
@@ -138,6 +139,9 @@
     </Compile>
     <Compile Include="Pages\AddItem.xaml.cs">
       <DependentUpon>AddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddItemToJourneyPage.xaml.cs">
+      <DependentUpon>AddItemToJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddJourneyPage.xaml.cs">
       <DependentUpon>AddJourneyPage.xaml</DependentUpon>
@@ -195,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddItemToJourneyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using TravelApp.DTO;
 using TravelListFrontend.DTO;
 using TravelListFrontend.Models;
 
@@ -72,6 +73,14 @@ namespace TravelListFrontend.ViewModels
             var json = await client.GetStringAsync(new Uri(link));
             var items = JsonConvert.DeserializeObject<IList<ItemLine>>(json);
             return items;
+        }
+
+        public async void AddItemLine(int journeyId,  ItemLineDTO itemLineDTO)
+        {
+            var itemJson = JsonConvert.SerializeObject(itemLineDTO);
+            string link = "http://localhost:65495/api/journey/" + journeyId  + "/items";
+            HttpClient client = new HttpClient();
+            var res = await client.PostAsync(link, new StringContent(itemJson, System.Text.Encoding.UTF8, "application/json"));
         }
         #endregion
 

@@ -37,9 +37,11 @@ namespace TravelAppBackend.Data
                 Item item1 = new Item() { Name = "tandenborstel", Category = badkamer };
                 Item item2 = new Item() { Name = "tandpasta", Category = badkamer };
                 Item item3 = new Item() { Name = "kussen", Category = slaapkamer };
+                Item item4 = new Item() { Name = "scheerapparaat", Category = badkamer };
                 _context.Items.Add(item1);
                 _context.Items.Add(item2);
                 _context.Items.Add(item3);
+                _context.Items.Add(item4);
                 _context.SaveChanges();
 
                 Models.Task task1 = new Models.Task() { Description = "Visum bestellen online" };

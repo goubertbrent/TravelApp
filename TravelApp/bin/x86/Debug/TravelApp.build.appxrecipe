@@ -88,6 +88,9 @@
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\AddItem.xbf">
       <PackagePath>Pages\AddItem.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\AddItemToJourneyPage.xbf">
+      <PackagePath>Pages\AddItemToJourneyPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brent\Documents\School\Windows\TravelApp\TravelApp\bin\x86\Debug\Pages\AddJourneyPage.xbf">
       <PackagePath>Pages\AddJourneyPage.xbf</PackagePath>
     </AppxPackagedFile>

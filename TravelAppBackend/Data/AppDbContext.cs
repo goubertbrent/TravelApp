@@ -16,6 +16,7 @@ namespace TravelAppBackend.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ItemLine> ItemLines { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

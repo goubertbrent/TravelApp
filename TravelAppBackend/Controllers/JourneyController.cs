@@ -96,7 +96,7 @@ namespace TravelAppBackend.Controllers
         }
 
         [HttpPost("{journeyId}/items")]
-        public ActionResult<ItemLine> PostItemLine(int journeyId, ItemLineDTO itemlineDTO)
+        public IActionResult PostItemLine(int journeyId, ItemLineDTO itemlineDTO)
         {
             if (!_journeyRepository.TryGetJourney(journeyId, out var journey))
             {
@@ -109,10 +109,10 @@ namespace TravelAppBackend.Controllers
 
             };
 
-            itemline.Item = _itemRepository.getById(itemlineDTO.ItemId);
+            itemline.Item = _itemRepository.GetByName(itemlineDTO.ItemName);
             journey.addItem(itemline);
             _journeyRepository.SaveChanges();
-            return CreatedAtAction("GetJourneys", new { id = journey.Id, itemlineId = itemline.Id }, itemline);
+            return Ok();
         }
 
         [HttpPost("{journeyId}/{itemLineId}/{isChecked}")]

@@ -37,5 +37,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="BtnItemJourney" Content="Add Item to journey" Click="BtnItemJourney_Click"/>
     </StackPanel>
 </Page>

@@ -39,6 +39,11 @@ namespace TravelAppBackend.Data.Repositories
             return _items.FirstOrDefault(i => i.Id == itemId);
         }
 
+        public Item GetByName(string name)
+        {
+            return _items.FirstOrDefault(item => item.Name == name);
+        }
+
         public void SaveChanges()
         {
             _dbContext.SaveChanges();

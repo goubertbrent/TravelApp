@@ -9,6 +9,7 @@ namespace TravelAppBackend.Models.Repositories
     {
         IEnumerable<Item> GetAll();
         Item getById(int itemId);
+        Item GetByName(string name);
         void Add(Item item);
         bool findName(string name);
         void SaveChanges();

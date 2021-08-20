@@ -31,13 +31,14 @@ namespace TravelApp.Pages
         {
             this.InitializeComponent();
             viewModel = new CategoryViewModel();
-            ListCat.DataContext = new CollectionViewSource { Source = viewModel.Categories };
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            TxtDone.Visibility = Visibility.Collapsed;
             ItemDTO item = new ItemDTO() { Name = NameItem.Text, CategoryName = CategoryCombo.SelectedValue.ToString() };
             viewModel.createItem(item);
+            TxtDone.Visibility = Visibility.Visible;
         }
 
         private void ListBox2_Loaded(object sender, RoutedEventArgs e)

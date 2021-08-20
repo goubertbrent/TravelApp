@@ -32,11 +32,14 @@
             <ListView.ItemTemplate>
             <DataTemplate>
                     <Border HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="200" Margin="0 8 0 8">
-                        <TextBlock x:ConnectionId='6' Padding="8" HorizontalAlignment="Center"  Text="{Binding Name}"                          />
+                        <TextBlock x:ConnectionId='8' Padding="8" HorizontalAlignment="Center"  Text="{Binding Name}"                          />
                     </Border>
                 </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+        <Border x:ConnectionId='4' HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="200" Margin="0 8 0 8"                       >
+            <TextBlock x:ConnectionId='5' Padding="8" HorizontalAlignment="Center"  Text="Create new Category"                          />
+        </Border>
     </StackPanel>
 </Page>
 

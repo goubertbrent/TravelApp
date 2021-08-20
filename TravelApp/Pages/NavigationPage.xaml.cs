@@ -26,6 +26,8 @@ namespace TravelApp.Pages
     public sealed partial class NavigationPage : Page
     {
         private String addJourneyText = "Add Journey";
+        private String addCategoryText = "Add category";
+        private String addItemText = "Add Item";
         public NavigationViewModel viewModel { get; set; }
         Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         public NavigationPage()
@@ -47,6 +49,10 @@ namespace TravelApp.Pages
             if(buttonText == addJourneyText)
             {
                 SplitViewFrame.Navigate(typeof(AddJourneyPage));
+            }
+            if(buttonText == addCategoryText)
+            {
+                SplitViewFrame.Navigate(typeof(AddCategory));
             }
             else
             {

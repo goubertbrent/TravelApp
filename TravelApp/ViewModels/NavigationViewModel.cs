@@ -12,7 +12,7 @@ namespace TravelApp.ViewModels
 
         public NavigationViewModel()
         {
-            menuIcons = new List<string>() { "Journeys", "Add Journey"};
+            menuIcons = new List<string>() { "Journeys", "Add Journey", "Add category", "Add Item"};
         }
 
     }

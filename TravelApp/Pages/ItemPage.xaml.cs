@@ -26,7 +26,7 @@ namespace TravelApp.Pages
     /// </summary>
     public sealed partial class ItemPage : Page
     {
-        public Category currentCategory { get; set; }
+        public Category currentCategory { get; set; } = new Category { Name = "dummy" };
         public IList<ItemLine> Items { get; set; }
         public int JourneyId { get; set; }
         public JourneyPageViewModel viewModel { get; set; }
@@ -51,11 +51,9 @@ namespace TravelApp.Pages
 
         private void CheckBox_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Debug.WriteLine("----------Tap------------");
             CheckBox checkbox = (sender as CheckBox);
             ItemLine clickedItem = checkbox.DataContext as ItemLine;
             bool isChecked = (bool)checkbox.IsChecked;
-            
             viewModel.EditIsChecked(JourneyId, clickedItem.Id, isChecked);
         }
     }

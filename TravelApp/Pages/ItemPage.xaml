@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <StackPanel >
         <StackPanel.Background>
             <ImageBrush ImageSource="../Assets/images/ballon.jpg" />
@@ -28,9 +29,21 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-
-                    <Border HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="400" Margin="0 8 0 8">
-                        <StackPanel>
+                    <Border x:Name="ItemBorder" HorizontalAlignment="Left" Background="#80ff80" MinWidth="150" MaxWidth="400" Margin="0 8 0 8">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup>
+                                <VisualState>
+                                    <VisualState.StateTriggers>
+                                        <!-- VisualState to be triggered when window width is >=720 effective pixels -->
+                                        <AdaptiveTrigger MinWindowWidth="720"/>
+                                    </VisualState.StateTriggers>
+                                    <VisualState.Setters>
+                                        <Setter Target="ItemBorder.MinWidth" Value="500"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <StackPanel x:Name="Test">
                             <TextBlock Padding="8"   Text="{Binding Item.Name}" />
                             <StackPanel  Orientation="Horizontal">
                                 <TextBlock Text="Amount: "/>

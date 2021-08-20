@@ -30,6 +30,9 @@ namespace TravelAppBackend.Data
 
                 Category badkamer = new Category() {Name="badkamer", User = user1 };
                 Category slaapkamer = new Category() { Name = "slaapkamer", User = user1 };
+                _context.Categories.Add(badkamer);
+                _context.Categories.Add(slaapkamer);
+                _context.SaveChanges();
 
                 Item item1 = new Item() { Name = "tandenborstel", Category = badkamer };
                 Item item2 = new Item() { Name = "tandpasta", Category = badkamer };

@@ -8,38 +8,56 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Background="#80ff80" Margin="0">
-        <Image Source="../Assets/images/travel-wallpaper.jpg" Stretch="Fill" MaxHeight="400" Margin="0,0,0,20"/>
-        <Grid Visibility="Visible">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="50px"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="50px"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+    <ScrollViewer>
+        <StackPanel Background="#80ff80" Margin="0" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <CompositeTransform SkewY="0.052" TranslateY="4.569" ScaleX="1" ScaleY="1" SkewX="0.84" TranslateX="5.16"/>
+            </StackPanel.RenderTransform>
+            <Image Source="../Assets/images/travel-wallpaper.jpg" Stretch="Fill" MaxHeight="400" Margin="0,0,0,20"/>
+            <Grid Visibility="Visible">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50px"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50px"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup>
+                        <VisualState>
+                            <VisualState.StateTriggers>
+                                <AdaptiveTrigger MinWindowWidth="800"/>
+                            </VisualState.StateTriggers>
+                            <VisualState.Setters>
+                                <Setter Target="TxtBUsername.FontSize" Value="36"/>
+                                <Setter Target="TxtBUsername.Text" Value="Lul"/>
+                                <Setter Target="TxtBPassword.FontSize" Value="36" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <TextBlock x:Name="TxtBUsername" Grid.Row="0" Grid.Column="0"  Text="Username:" ></TextBlock>
+                <TextBox  Grid.Row="0" Grid.Column="2" x:Name="TxtUsername"  FontSize="36"/>
 
 
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Username:" FontSize="36"></TextBlock>
-            <TextBox Grid.Row="0" Grid.Column="2" x:Name="TxtUsername"  FontSize="36"/>
+                <TextBlock x:Name="TxtBPassword" Grid.Row="2" Grid.Column="0" Text="Password:" />
+                <PasswordBox Grid.Row="2" Grid.Column="2" x:Name="TxtPassword" FontSize="36"/>
 
+                <Button Grid.Row="4" Grid.Column="2" Content="Login" FontSize="36" Click="Button_ClickAsync"/>
+                <Button Grid.Row="4" Grid.Column="3" Content="Registreer" FontSize="36" Click="Button_Click_1"/>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="0" Margin="200,48,0,0" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="10"/>
+                <TextBlock Grid.Column="1" x:Name="ErrorText" Foreground="Red"  HorizontalAlignment="Center"  Grid.Row="3" Text="Username and/or password are incorrect" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40" Margin="102,0,0,0" Width="755" FontSize="24" Visibility="Collapsed"/>
 
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Password:" FontSize="36"/>
-            <PasswordBox Grid.Row="2" Grid.Column="2" x:Name="TxtPassword" FontSize="36"/>
+            </Grid>
 
-            <Button Grid.Row="4" Grid.Column="2" Content="Login" FontSize="36" Click="Button_ClickAsync"/>
-            <Button Grid.Row="4" Grid.Column="3" Content="Registreer" FontSize="36" Click="Button_Click_1"/>
-            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="0" Margin="200,48,0,0" Grid.Row="3" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="10"/>
-            <TextBlock Grid.Column="1" x:Name="ErrorText" Foreground="Red"  HorizontalAlignment="Center"  Grid.Row="3" Text="Username and/or password are incorrect" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40" Margin="102,0,0,0" Width="755" FontSize="24" Visibility="Collapsed"/>
-
-        </Grid>
-
-    </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
 </Page>
